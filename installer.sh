@@ -15,7 +15,7 @@ fi
 
 while IFS= read -r url; do
     if [ -n "$url" ]; then
-        if ! sudo wget -P "$TARGET_DIR" "$url"; then
+        if ! sudo wget -qP "$TARGET_DIR" "$url"; then
             echo "Failed to download: $url"
         else
             echo "Downloaded: $url"
