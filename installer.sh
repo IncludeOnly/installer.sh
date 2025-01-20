@@ -6,6 +6,7 @@ LIBRARIES_FILE="https://raw.githubusercontent.com/IncludeOnly/.github/refs/heads
 LOCAL_FILE="links.txt"
 TARGET_DIR="/usr/local/include/io/"
 
+sudo rm -rf $TARGET_DIR
 sudo mkdir -p "$TARGET_DIR"
 
 if ! wget -q -O "$LOCAL_FILE" "$LIBRARIES_FILE"; then
